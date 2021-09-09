@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML Forms Input</title>
+    </head>
+    <body>
+        <!-- How do we create a form? -->
+        <!-- How do we validate a form? -->
+        <!-- How do we submit a form? -->
+
+        <form
+            id="myTestForm"
+            action="https://formspree.io/f/xzbyywwz"
+            method="POST"
+        >
+            <label for="textInput">Name:</label>
+            <input
+                id="textInput"
+                name="name"
+                type="text"
+                placeholder="This is an input text"
+            />
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="colorSelector">Choose a color:</label>
+            <select id="colorSelector" name="color">
+                <option>Green</option>
+                <option>Blue</option>
+                <option>Red</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea
+                id="message"
+                name="message"
+                placeholder="This is a text area field"
+            ></textarea>
+
+            <label for="size">L</label>
+            <input type="checkbox" name="size" />
+
+            <input type="submit" />
+        </form>
+    </body>
+
+    <style>
+        #myTestForm {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</html>

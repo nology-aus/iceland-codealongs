@@ -1,0 +1,29 @@
+#box {
+    background-color: red;
+    width: 200px;
+    text-align: center;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 0px 10px 0px 10px;
+}
+
+.container {
+    background-color: lightgreen;
+    border: 2px solid coral;
+    padding: 30px 0px;
+}
+
+.box {
+    background-color: hotpink;
+    padding: 20px;
+    border: 2px solid coral;
+    width: 100%;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 50px;
+}

@@ -1,0 +1,75 @@
+/* Justify Content: Without Flex  */
+
+main {
+    text-align: justify;
+}
+
+main::after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+}
+
+.card {
+    display: inline-block;
+}
+
+/* Justify Content: With Flex  */
+/* Wrapping Elements with Flex */
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 900px;
+    height: 300px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card1 {
+    background-color: lightblue;
+}
+
+#card2 {
+    background-color: orange;
+}
+
+#card3 {
+    background-color: pink;
+}
+
+#card4 {
+    background-color: red;
+}
+
+#card5 {
+    background-color: blue;
+}
+
+/* Changing display direction of elements */
+
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100px;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.input {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+/* Descendant Combinator */
+
+/* .className selector is less specific than element.className selector */
+div.container p {
+    color: red;
+}
+
+.container p {
+    color: purple;
+}
+
+div.grand-parent p {
+    font-weight: bold;
+}
+
+/* Adjacent Siblings */
+div.container2 + p {
+    color: hotpink;
+}
+
+/* General Sibblings */
+div.container2 ~ p {
+    font-style: italic;
+}
+
+/* Children Combinator */
+div.grand-parent > p {
+    color: hotpink;
+}
+
+/* Mixing IDs and Classes */
+.red-para {
+    color: red;
+}
+
+/* This selects an element with a class of .red-para inside an element with an id of #mainHeader*/
+#mainHeader .red-para {
+    text-decoration: underline;
+}
+
+/* This selects an element that has both the id of #bluePara and the class of .third-para */
+#bluePara.third-para {
+    border: 2px solid blue;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>CSS Combinators</title>
+    </head>
+    <body>
+        <!-- Descendant Combinator -->
+
+        <div class="container">
+            <p>This a paragraph. I will be selected</p>
+        </div>
+
+        <span class="container">
+            <p>Para in span.</p>
+        </span>
+
+        <p>An other paragraph. I won't be selected</p>
+
+        <!-- Children Combinators -->
+        <div class="grand-parent">
+            <div class="parent">
+                <p>I am a grandchild, I am bold</p>
+            </div>
+            <p>I am a child of grand-parent. And I am HotPink</p>
+        </div>
+
+        <p>I am a sibling of grand-parent</p>
+
+        <!-- Adjacent / General Siblings -->
+        <div class="container2">
+            <p>I am a child para</p>
+        </div>
+
+        <p>This is the first sibling. I am Hot Pink</p>
+        <p>This is the second sibling.</p>
+
+        <!-- Mixing IDs and classes -->
+        <p class="red-para">Paragraph</p>
+        <div id="mainHeader">
+            <p>First Para</p>
+            <p class="red-para">Second Para</p>
+            <p id="bluePara" class="third-para">Third Para</p>
+        </div>
+    </body>
+</html>

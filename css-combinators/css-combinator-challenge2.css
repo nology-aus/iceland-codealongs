@@ -1,0 +1,50 @@
+.container > p {
+    margin-left: 30px;
+}
+
+.container > h1 ~ p {
+    color: darkgrey;
+}
+
+.container > h1 + p {
+    font-style: italic;
+    color: black;
+}
+
+.container > h2 ~ p {
+    text-decoration: underline;
+    color: black;
+}
+
+.container > h3 ~ p {
+    text-decoration: none;
+    color: blue;
+}
+
+.container > h3 + p {
+    color: black;
+}
+
+/* The elements inside of this class should have the following behaviour:
+- all p tags should be indented using margin
+- the first p tag after a h1 should be italic
+- the remaining p tags after an h1 should be dark grey
+- ALL p tag after an h2 should be underlined
+- all the p tags after h3 should have blue text except the first  */
+
+/* Other solution using of-type combinators */
+
+/* h2 ~ p:nth-of-type(4),
+h2 ~ p:nth-of-type(5),
+h2 ~ p:nth-of-type(6) {
+    text-decoration: underline;
+}
+h2 ~ p:nth-of-type(4) {
+    text-decoration: underline;
+}
+h2 ~ p:nth-of-type(5) {
+    text-decoration: underline;
+}
+h2 ~ p:nth-of-type(6) {
+    text-decoration: underline;
+} */

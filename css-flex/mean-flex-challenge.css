@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.card {
+    border: 1px solid black;
+    width: 300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.medium-card {
+    height: 300px;
+    background-color: orange;
+}
+
+.small-card {
+    height: 200px;
+    background-color: lightskyblue;
+}
+
+.large-card {
+    height: 500px;
+    background-color: blueviolet;
+}

@@ -1,0 +1,32 @@
+body {
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+div {
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: blue;
+}
+
+div > p {
+    color: red;
+    text-decoration: underline;
+}
+
+div > ul {
+    list-style: none;
+}
+
+div ~ p {
+    color: brown;
+}
+
+div + p {
+    color: coral;
+    font-weight: bold;
+}

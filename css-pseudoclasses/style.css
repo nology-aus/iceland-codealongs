@@ -1,0 +1,85 @@
+p {
+    color: hotpink;
+}
+
+/* of-type pseudo-classes */
+
+p:hover {
+    color: blue;
+}
+
+.container > p:first-of-type {
+    color: red;
+}
+
+.container > p:nth-of-type(2) {
+    color: yellowgreen;
+}
+
+.container > p:nth-last-of-type(2) {
+    font-weight: bold;
+}
+
+.container > p:last-of-type {
+    font-style: italic;
+}
+
+.container > h1:only-of-type {
+    text-decoration: underline;
+}
+
+/* Input Related Pseudo-classes */
+
+form > input:required {
+    border: 2px solid red;
+}
+
+form > input:optional {
+    border: 2px dotted blue;
+}
+
+form > input:enabled {
+    background-color: lightgray;
+}
+
+form > input:disabled {
+    background-color: white;
+    color: white;
+}
+
+/* Unvisited Link */
+/* a:link {
+    color: hotpink;
+}
+
+a:visited {
+    color: greenyellow;
+}
+
+a:hover {
+    background-color: bisque;
+    cursor: crosshair;
+}
+
+a:active {
+    background-color: blue;
+    cursor: pointer;
+    color: red;
+} */
+a:visited {
+    color: deeppink;
+}
+
+a:hover {
+    color: mediumseagreen;
+}
+
+a:active {
+    background-color: lightsalmon;
+    color: blue;
+    cursor: pointer;
+}
+
+a:link {
+    color: midnightblue;
+}

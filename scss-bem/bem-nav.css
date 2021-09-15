@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  height: 60px;
+}
+.nav__group {
+  display: flex;
+}
+.nav__item {
+  margin: 0px 20px;
+}
+.nav--stretched {
+  justify-content: space-between;
+}
+.nav--spaced {
+  justify-content: space-around;
+}
+.nav--reversed {
+  flex-direction: row-reverse;
+}

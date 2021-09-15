@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 60px;
+
+    &__group {
+        display: flex;
+    }
+
+    &__item {
+        margin: 0px 20px;
+    }
+
+    &--stretched {
+        justify-content: space-between;
+    }
+
+    &--spaced {
+        justify-content: space-around;
+    }
+
+    &--reversed {
+        flex-direction: row-reverse;
+    }
+}

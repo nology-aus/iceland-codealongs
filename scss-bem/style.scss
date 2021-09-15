@@ -1,0 +1,34 @@
+.btn {
+    // all styling for elements with the class of btn lives at the top level
+    background-color: chocolate;
+
+    // Using the ampersand & symbol, we can append/concetonate our __element/--modifiers to the top level class name
+    // The CSS output for the block below will be
+    // .btn--alert {
+    //   border: 2px solid red;
+    // }
+    &--alert {
+        border: 2px solid red;
+    }
+
+    &__text {
+        font-weight: bold;
+        color: white;
+
+        &--primary {
+            font-style: italic;
+            // CSS Output
+            // .btn__text--primary {
+            //      font-style: italic;
+            // }
+
+            &:hover {
+                background-color: lightblue;
+            }
+        }
+
+        &--secondary {
+            color: green;
+        }
+    }
+}

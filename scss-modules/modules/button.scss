@@ -1,0 +1,30 @@
+// Importing partial files inside my module (omitting the leading underscore)
+@use "./../partials/palette";
+@use "./../partials/typography";
+
+.btn {
+    background-color: palette.$primary-background;
+    font-size: typography.$primary-font-size;
+
+    &--alert {
+        border: 2px solid red;
+    }
+
+    &__text {
+        font-weight: typography.$bold-weight;
+        color: palette.$primary-text-color;
+
+        &--primary {
+            font-style: italic;
+
+            &:hover {
+                background-color: blueviolet;
+            }
+        }
+
+        &--secondary {
+            color: green;
+            font-size: typography.$secondary-font-size;
+        }
+    }
+}

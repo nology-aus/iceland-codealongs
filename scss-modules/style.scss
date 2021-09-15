@@ -1,0 +1,13 @@
+@use "./partials/palette";
+// Importing my button module inside my main scss file.
+@use "./modules/button";
+
+h1 {
+    color: palette.$main-header-color;
+    background-color: palette.$primary-background;
+}
+
+h2 {
+    $secondary-header-color: hotpink;
+    color: $secondary-header-color;
+}

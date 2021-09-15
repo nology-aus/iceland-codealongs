@@ -1,0 +1,48 @@
+// Syntax to instantiate a variable
+// [$][variable name][:][value, can be px, number, string, hex color, etc][;]
+
+$primary-background: #a85418;
+$primary-text-color: white;
+$main-header-color: bisque;
+$bold-weight: 700;
+$primary-font-size: 36px;
+$secondary-font-size: 18px;
+
+.btn {
+    background-color: $primary-background;
+    font-size: $primary-font-size;
+
+    &--alert {
+        border: 2px solid red;
+    }
+
+    &__text {
+        font-weight: $bold-weight;
+        color: $primary-text-color;
+
+        &--primary {
+            font-style: italic;
+
+            &:hover {
+                background-color: lightblue;
+            }
+        }
+
+        &--secondary {
+            color: green;
+            font-size: $secondary-font-size;
+        }
+    }
+}
+
+h1 {
+    // $main-header-color is defined at the top level. It is in the global scope. All my SCSS selector can access it.
+    color: $main-header-color;
+    background-color: $primary-background;
+}
+
+h2 {
+    // $secondary-header-color is defined inside a SCSS selector. It is a local variable. Only the h2 block will have acces to it.
+    $secondary-header-color: hotpink;
+    color: $secondary-header-color;
+}

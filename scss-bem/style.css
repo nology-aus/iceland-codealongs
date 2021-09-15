@@ -1,0 +1,19 @@
+.btn {
+  background-color: chocolate;
+}
+.btn--alert {
+  border: 2px solid red;
+}
+.btn__text {
+  font-weight: bold;
+  color: white;
+}
+.btn__text--primary {
+  font-style: italic;
+}
+.btn__text--primary:hover {
+  background-color: lightblue;
+}
+.btn__text--secondary {
+  color: green;
+}

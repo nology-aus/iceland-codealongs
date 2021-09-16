@@ -1,0 +1,76 @@
+// @mixin [mixin name] {
+// ...
+// }
+
+// @mixin [mixin name](argument1 , arg2, arg3,  ..) {
+//    STYLE CODE
+// }
+
+@mixin flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+%flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin border {
+    border: 2px solid black;
+}
+
+// This variable is different from the variable declared inside the mixin declared on line 28.
+$meep: 500px;
+
+@mixin size-modifier($sm, $meep, $lg) {
+    &--sm {
+        font-size: $sm;
+    }
+
+    &--md {
+        font-size: $meep;
+    }
+
+    &--lg {
+        font-size: $lg;
+    }
+}
+
+@mixin border-modifier($mainBorder, $secondaryBorder: 2px solid blue) {
+    &--mainbd {
+        border: $mainBorder;
+    }
+
+    &--secbd {
+        border: $secondaryBorder;
+    }
+}
+
+.btn {
+    @include flex;
+    @include size-modifier(0.7rem, 1rem, 1.5rem);
+    margin: 20px;
+}
+
+.nav {
+    // Use @include to call the mixin, with the name of that mixin
+    @extend %flex;
+    @include border;
+    @include border-modifier(1px solid red);
+    height: 60px;
+    margin-bottom: 20px;
+
+    &__link {
+        @include size-modifier(8px, 30px, 100px);
+    }
+}
+
+.section {
+    @extend %flex;
+    @include border;
+    @include border-modifier(1px solid red);
+    padding: 20px;
+}

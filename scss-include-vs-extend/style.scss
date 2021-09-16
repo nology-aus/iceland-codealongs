@@ -1,0 +1,43 @@
+// Placeholder
+// [%][name] {
+// ...
+// }
+
+.text-style {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+    color: hotpink;
+}
+
+%background-style {
+    background-color: lightgreen;
+    color: darkcyan;
+}
+
+@mixin sizing-mod($sm, $lg) {
+    &--sm {
+        font-size: $sm;
+    }
+
+    &--lg {
+        font-size: $lg;
+    }
+}
+
+.btn {
+    @extend %background-style;
+    @extend .text-style;
+    @include sizing-mod(1.5rem, 2.5rem);
+}
+
+.chip {
+    @extend %background-style;
+    @extend .text-style;
+    @include sizing-mod(1.5rem, 2.5rem);
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+    border: 2px solid red;
+    border-radius: 10px;
+}

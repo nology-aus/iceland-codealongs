@@ -1,0 +1,53 @@
+.section, .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+.btn--sm {
+  font-size: 0.7rem;
+}
+.btn--md {
+  font-size: 1rem;
+}
+.btn--lg {
+  font-size: 1.5rem;
+}
+
+.nav {
+  border: 2px solid black;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.nav--mainbd {
+  border: 1px solid red;
+}
+.nav--secbd {
+  border: 2px solid blue;
+}
+.nav__link--sm {
+  font-size: 8px;
+}
+.nav__link--md {
+  font-size: 30px;
+}
+.nav__link--lg {
+  font-size: 100px;
+}
+
+.section {
+  border: 2px solid black;
+  padding: 20px;
+}
+.section--mainbd {
+  border: 1px solid red;
+}
+.section--secbd {
+  border: 2px solid blue;
+}

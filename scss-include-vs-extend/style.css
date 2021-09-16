@@ -1,0 +1,32 @@
+.text-style, .chip, .btn {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 24px;
+  color: hotpink;
+}
+
+.chip, .btn {
+  background-color: lightgreen;
+  color: darkcyan;
+}
+
+.btn--sm {
+  font-size: 1.5rem;
+}
+.btn--lg {
+  font-size: 2.5rem;
+}
+
+.chip {
+  text-align: center;
+  margin: 10px;
+  width: 200px;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+.chip--sm {
+  font-size: 1.5rem;
+}
+.chip--lg {
+  font-size: 2.5rem;
+}

@@ -15,11 +15,13 @@
 ## When cloning a repo
 
 -   Clone an existing repository:
-    Via SSH
-    $ git clone ssh://user@domain.com/repo.git
 
+    git clone ssh://user@domain.com/repo.git
+
+    ```bash
     Via HTTP
     $ git clone http://domain.com/user/repo.git
+    ```
 
 -   Create a new local repository in the current directory:
     $ git init

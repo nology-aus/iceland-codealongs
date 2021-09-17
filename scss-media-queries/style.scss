@@ -1,0 +1,7 @@
+// HOW TO WRITE A MEDIA QUERY:
+// @media only screen and (min-width: witdthValue) and (max-width:widthValue) {
+//  Stylyng code
+//  }
+
+@use "./modules/button";
+@use "./modules/gallery";

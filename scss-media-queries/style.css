@@ -1,0 +1,67 @@
+button {
+  font-size: 120px;
+}
+@media only screen and (max-width: 576px) {
+  button {
+    font-size: 24px;
+    background-color: lightblue;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  button {
+    font-size: 36px;
+    background-color: blue;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  button {
+    font-size: 72px;
+    background-color: darkblue;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  button {
+    font-size: 96px;
+    background-color: hotpink;
+  }
+}
+
+.gallery {
+  display: grid;
+}
+@media only screen and (max-width: 576px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery img {
+    width: 90vw;
+    border: 2px solid lightcoral;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery img {
+    width: 45vw;
+    border: 2px solid red;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery img {
+    width: 30vw;
+    border: 2px solid darkred;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery img {
+    width: 20vw;
+    border: 2px solid hotpink;
+  }
+}

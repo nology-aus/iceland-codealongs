@@ -1,0 +1,70 @@
+@mixin horizontal-stripe {
+    height: 33.33%;
+    width: 100%;
+}
+
+@mixin vertical-stripe {
+    height: 100%;
+    width: 33.33%;
+}
+
+.flag {
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+
+    @media only screen and (max-width: 600px) {
+        &__stripe1 {
+            @include horizontal-stripe;
+            background-color: black;
+        }
+
+        &__stripe2 {
+            @include horizontal-stripe;
+            background-color: red;
+        }
+
+        &__stripe3 {
+            @include horizontal-stripe;
+            background-color: yellow;
+        }
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+        display: flex;
+
+        &__stripe1 {
+            @include vertical-stripe;
+            background-color: black;
+        }
+
+        &__stripe2 {
+            @include vertical-stripe;
+            background-color: yellow;
+        }
+
+        &__stripe3 {
+            @include vertical-stripe;
+            background-color: red;
+        }
+    }
+
+    @media only screen and (min-width: 901px) {
+        display: flex;
+
+        &__stripe1 {
+            @include vertical-stripe;
+            background-color: green;
+        }
+
+        &__stripe2 {
+            @include vertical-stripe;
+            background-color: white;
+        }
+
+        &__stripe3 {
+            @include vertical-stripe;
+            background-color: orange;
+        }
+    }
+}

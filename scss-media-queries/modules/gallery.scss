@@ -1,0 +1,41 @@
+@use "./../partials/devices";
+
+.gallery {
+    display: grid;
+
+    @include devices.phone {
+        grid-template-columns: 1fr;
+
+        img {
+            width: 90vw;
+            border: 2px solid lightcoral;
+        }
+    }
+
+    @include devices.tablet {
+        grid-template-columns: repeat(2, 1fr);
+
+        img {
+            width: 45vw;
+            border: 2px solid red;
+        }
+    }
+
+    @include devices.landscape-tablet {
+        grid-template-columns: repeat(3, 1fr);
+
+        img {
+            width: 30vw;
+            border: 2px solid darkred;
+        }
+    }
+
+    @include devices.laptop {
+        grid-template-columns: repeat(4, 1fr);
+
+        img {
+            width: 20vw;
+            border: 2px solid hotpink;
+        }
+    }
+}

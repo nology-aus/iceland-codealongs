@@ -1,0 +1,62 @@
+.flag {
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+}
+@media only screen and (max-width: 600px) {
+  .flag__stripe1 {
+    height: 33.33%;
+    width: 100%;
+    background-color: black;
+  }
+  .flag__stripe2 {
+    height: 33.33%;
+    width: 100%;
+    background-color: red;
+  }
+  .flag__stripe3 {
+    height: 33.33%;
+    width: 100%;
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .flag {
+    display: flex;
+  }
+  .flag__stripe1 {
+    height: 100%;
+    width: 33.33%;
+    background-color: black;
+  }
+  .flag__stripe2 {
+    height: 100%;
+    width: 33.33%;
+    background-color: yellow;
+  }
+  .flag__stripe3 {
+    height: 100%;
+    width: 33.33%;
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 901px) {
+  .flag {
+    display: flex;
+  }
+  .flag__stripe1 {
+    height: 100%;
+    width: 33.33%;
+    background-color: green;
+  }
+  .flag__stripe2 {
+    height: 100%;
+    width: 33.33%;
+    background-color: white;
+  }
+  .flag__stripe3 {
+    height: 100%;
+    width: 33.33%;
+    background-color: orange;
+  }
+}

@@ -1,0 +1,25 @@
+@use "./breakpoints";
+
+@mixin phone {
+    @media only screen and (max-width: breakpoints.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: breakpoints.$phone + 1) and (max-width: breakpoints.$tablet) {
+        @content;
+    }
+}
+
+@mixin landscape-tablet {
+    @media only screen and (min-width: breakpoints.$tablet + 1) and (max-width: breakpoints.$landscape-tablet) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media only screen and (min-width: breakpoints.$landscape-tablet + 1) and (max-width: breakpoints.$laptop) {
+        @content;
+    }
+}

@@ -21,6 +21,10 @@ if (x) {
     console.log("x is not a truthy value");
 }
 
+x
+    ? console.log("After ?", "x is a truthy value")
+    : console.log("After :", "x is not a truthy value");
+
 const priceOfCheese = 10;
 const maxPrice = 15;
 if (priceOfCheese > 10) {
@@ -53,24 +57,24 @@ if (temp <= 0) {
     console.log("Stay inside, put AC on");
 }
 
-const errorCode = 1; // errorCode 1, 2, 3 , if 0 it means success
+// const errorCode = 1; // errorCode 1, 2, 3 , if 0 it means success
 
 // if errorCode = 0 >> evaluated to falsey
 // >> !false == true
 
-if (!errorCode) {
-    // because errorCode is 0 > falsey > !0 is true
-    console.log("Success");
-} else if (errorCode === 1) {
-    // if errorCode is equal to 1, this evaluates to true
-    console.log("File path broken"); // this block of code is going to be executed
-} else if (errorCode === 2) {
-    console.log("Page Not Found");
-} else if (errorCode === 3) {
-    console.log("Syntax error");
-} else {
-    console.log("Error code not valid");
-}
+// if (!errorCode) {
+//     // because errorCode is 0 > falsey > !0 is true
+//     console.log("Success");
+// } else if (errorCode === 1) {
+//     // if errorCode is equal to 1, this evaluates to true
+//     console.log("File path broken"); // this block of code is going to be executed
+// } else if (errorCode === 2) {
+//     console.log("Page Not Found");
+// } else if (errorCode === 3) {
+//     console.log("Syntax error");
+// } else {
+//     console.log("Error code not valid");
+// }
 
 // ELSE IF CHALLENGE
 // Check for the smallest value
@@ -82,18 +86,45 @@ if (!errorCode) {
 // 6. Or “`x` is equal to `y`”
 // 7. Depending on the value of `x` and `y`
 
-let firstValue = 100;
-let secondValue = 10;
+const firstValue = 10;
+const secondValue = 20;
 
 if (firstValue > secondValue) {
-    ++firstValue;
-    console.log(`${firstValue}`);
+    console.log(`${firstValue} is greater than ${secondValue}`);
+} else if (firstValue < secondValue) {
+    console.log(`${firstValue} is smaller than ${secondValue}`);
 } else {
-    console.log("My expression was false");
+    console.log(`${firstValue} is equal to ${secondValue}`);
 }
 
-let falseyValue = 0;
+// Syntax for Switch Conditional Statements
 
-if (!falseyValue) {
-    console.log("My value is falsey");
+// switch (expression - variable) {
+//      case [firstCase]:
+//          Block of code that is executed if 1st case is true;
+//          break;
+//      case [secondCase]:
+//          Block of code that is executed if 2nd case is true;
+//          break;
+//      default:
+//      Block of code that is executed if none of the case      ///      are true;
+// }
+
+const errorCode = 0; //errorCode 1, 2, 3 , if 0 it means success
+
+switch (errorCode) {
+    case 0:
+        console.log("Succes");
+        break;
+    case 1:
+        console.log("File path broken");
+        break;
+    case 2:
+        console.log("Page Not Found");
+        break;
+    case 3:
+        console.log("Syntax Error");
+        break;
+    default:
+        console.log("Error Not Valid");
 }

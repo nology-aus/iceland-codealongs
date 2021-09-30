@@ -15,6 +15,8 @@ const styleButton = document.getElementById("styleButton");
 
 // Selecting Elements By Class Name
 const containers = document.getElementsByClassName("container");
+console.log(containers);
+console.log(containers[0]);
 const buttons = document.getElementsByClassName("button");
 
 // Selecting Elements by Tag Name
@@ -47,9 +49,24 @@ const removeElement = (parentNodeId, childNodeId) => {
 
 styleButton.addEventListener("click", () => {
     body.classList.toggle("body--nightMode");
+
+    // containers is an HTML Collection (list) of two elements which have the class of ".container"
+
+    // This is going to loop for
+    // i = 0
+    // i = 1
+    // This loop will stop when i = 2;
+
     for (let i = 0; i < containers.length; i++) {
         containers[i].classList.toggle("container--nightMode");
+        // 1st iteration
+        // containers[0].classList.toggle("container--nightMode");
+        // i++ > i = 1 ;
+        // 2nd iteration
+        // containers[1].classList.toggle("container--nightMode");
+        // i++ > i = 2; This stops my loop
     }
+
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.toggle("button--nightMode");
     }

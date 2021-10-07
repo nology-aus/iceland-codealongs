@@ -66,13 +66,13 @@ console.log(number % 2 === 0);
 // Assignment Operators
 let value = 124 / 2; // 62
 
-value /= 2;
+value /= 2; // value = value / 2;
 console.log(value);
-value -= 1;
+value -= 1; // value = value - 1;
 console.log(value);
-value *= 3;
+value *= 3; // value = value * 3;
 console.log(value);
-value += 10;
+value += 10; // value = value + 10;
 console.log(value);
-value **= 2;
+value **= 2; // value = value ** 2;
 console.log(value);

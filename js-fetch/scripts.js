@@ -8,9 +8,11 @@
 
 // fetch => always always ALWAYS returns a promise
 
+// Capitalized, Read only
 const CATFACTS_URL = "https://catfact.ninja";
 
 const getBreeds = async (pageNumber) => {
+    gi;
     const response = await fetch(`${CATFACTS_URL}/breeds?page=${pageNumber}`);
     const data = await response.json();
     console.log(data);

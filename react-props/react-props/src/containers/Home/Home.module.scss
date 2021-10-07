@@ -1,0 +1,6 @@
+.Home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60vw;
+    grid-gap: 10px;
+}

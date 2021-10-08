@@ -28,12 +28,14 @@ const Card = ({ title, description, number }) => {
     );
 };
 
+// Defining the required types for each prop
 Card.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     number: PropTypes.number,
 };
 
+// Defining default values for each prop
 Card.defaultProps = {
     title: "This is the default name of my card",
     description: "This is some placeholder default description",

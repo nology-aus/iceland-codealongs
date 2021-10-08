@@ -44,7 +44,7 @@ console.log(left === right); // 123 == "123", false
 
 console.log(5 > 2 && 2 === 2); // true && true => true
 console.log(5 > 2 && 2 === "2"); // true && false => false
-console.log(2 > 1 && 3 > 1 && 4 > 1 && false); // true && true && true && false => false
+console.log(false && false && false && false); // true && true && true && false => false
 
 console.log(false && 2 > 1 && 3 > 1 && 4 > 1); // false
 console.log(2 > 1 && false && 3 > 1 && 4 > 1); // false
@@ -61,6 +61,37 @@ false;
 // Falsey Values
 0;
 undefined;
+NaN;
+null;
+("");
+false;
 
-let myVariable;
-console.log(typeof myVariable);
+console.log(0 || false || Boolean(123)); // true
+console.log(undefined || (NaN && 23));
+
+2 == "2"; // true
+2 === 2; // true
+2 === "2"; // false
+"2" + 3 == 23; // "23" == 23 => true
+"2" + 3 === 5; // "23" === 5 => false
+10 % 3; // 1
+10 % 3 === 1; // true
+(100 % 7) % 5; // (2) % 5 => 2
+(100 % 7) % 5 !== 0; // true
+(100 % 7) % 9 == 2; // (2) % 9 => 2
+!(10 % 2); // !(0) => true
+!!!!((10 % 7) % 3); // !!!!((3) % 3) => !!!!(0) => !!!true => !!false => !true => false
+10 % 3 === -1 % 2; // (1) === (-1) => false
+(892783 != "89278" + 3) == 0; // (892783 != '892783') == 0 => (false) == 0 => true
+true && false; // false
+false || true; // true
+true || false; // true
+true || false; // true
+true || false + true; // true
+true * false && false + true; // 0
+10 && 123 && -1 && 3; // 3
+10 && 123 && 0 && 3; // 0
+(10 && (123 || "") && parseInt("Roisin")) || 23 / 23 - 1;
+// NaN || 0 => 0
+3 && "Calum" && ("" || 26); // => 26
+(3 && "Remi" && null) || 86 * 0 || ("" + 1 && "Cat" + "Dog"); // => 'CatDog'

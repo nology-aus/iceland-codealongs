@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.scss";
 import Home from "./containers/Home";
 
 // How do we write React Components?
@@ -14,10 +14,10 @@ const Header = () => {
 
 const App = () => {
     return (
-        <>
+        <div className={styles.App}>
             <Header />
             <Home />
-        </>
+        </div>
     );
 };
 

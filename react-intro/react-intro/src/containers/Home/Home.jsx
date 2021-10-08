@@ -1,11 +1,12 @@
 // Shorthand for boiler plate Functional Component
 // `rafce`
 
-import Card from "./../../components/Card/Card.jsx";
+import styles from "./Home.module.scss";
+import Card from "../../components/Card/Card.jsx";
 
 const Home = () => {
     return (
-        <div>
+        <div className={styles.Home}>
             <Card />
             <Card />
             <Card />

@@ -1,0 +1,18 @@
+@import "../../assests/typography.scss";
+@import "../../assests/variables.scss";
+
+.Card {
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    padding: 10px;
+
+    &_Title {
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    &_Description {
+        font-family: $primary-font;
+        font-weight: bold;
+    }
+}

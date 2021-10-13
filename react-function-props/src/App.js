@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { useState } from "react";
+import SearchBar from "./components/SearchBar";
 
 const Quantity = ({ count, onChange }) => {
     // 4. when change happens, when count is about to change
@@ -126,9 +127,25 @@ function App() {
         { label: "Toyota", data: 104 },
     ];
 
+    const [search, setSearch] = useState("");
+
+    console.log("App.js search state", search);
+
+    const handleSubmit = (newSearchValue) => {
+        setSearch(newSearchValue);
+    };
+
     return (
         <div className="App">
-            <Form dropdownOptions={carOptions} />
+            <div className="Lesson">
+                <h2>Lesson: Function as Props</h2>
+                <Form dropdownOptions={carOptions} />
+            </div>
+            <div className="Challenge">
+                <h2>Challenge: SearchBar && Function as Props</h2>
+                <SearchBar onSubmit={handleSubmit} />
+                <p>Search Value: {search}</p>
+            </div>
         </div>
     );
 }

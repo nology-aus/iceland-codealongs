@@ -1,0 +1,11 @@
+.Students {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.StudentCard {
+    border: 2px solid #222;
+    padding: 20px;
+    border-radius: 7px;
+}

@@ -132,12 +132,18 @@ const RandomWord = () => {
         const random = Math.floor(Math.random() * words.length);
         setWord(words[random]);
 
+        // When the component mounts, we are starting an interval
+        // that sets a random word to state every second
         const intervalId = setInterval(() => {
             const random = Math.floor(Math.random() * words.length);
             console.log("Random", random, "Word:", words[random]);
             setWord(words[random]);
         }, 1000);
 
+        // When the component unmounts, we are removing the interval
+        // such that the interval does run after the component is unmounted
+        //
+        // TIP: See what happens if you remove this return
         return () => {
             clearInterval(intervalId);
         };

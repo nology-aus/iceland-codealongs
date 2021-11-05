@@ -3,6 +3,7 @@ import "./App.css";
 
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
+import StudentsList from "./containers/StudentsList";
 
 const Quantity = ({ count, onChange }) => {
     // 4. when change happens, when count is about to change
@@ -145,6 +146,10 @@ function App() {
                 <h2>Challenge: SearchBar && Function as Props</h2>
                 <SearchBar onSubmit={handleSubmit} />
                 <p>Search Value: {search}</p>
+            </div>
+            <div className="Challenge">
+                <h2>Challenge: Function Props Students</h2>
+                <StudentsList />
             </div>
         </div>
     );

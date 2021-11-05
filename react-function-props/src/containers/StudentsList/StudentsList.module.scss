@@ -1,0 +1,15 @@
+.StudentsList {
+    &_Grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+.StudentCard {
+    border: 2px solid #222;
+    border-radius: 7px;
+    padding: 20px;
+    text-align: left;
+}

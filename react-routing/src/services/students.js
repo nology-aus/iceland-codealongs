@@ -12,6 +12,18 @@ const cleanRecords = (querySnapshot) => {
 
 // clean lots of student records
 
+//CRUD
+
+//create
+export const createStudent = async (student) => {
+    // CollectionReference
+    const colRef = firestore.collection("students");
+    // DocumentReference
+    const docRef = colRef.doc();
+    await docRef.set(student);
+};
+
+//read
 // get all students from firestore
 export const getStudents = async () => {
     // CollectionReference
@@ -36,20 +48,14 @@ export const findStudent = async (id) => {
     return cleanRecord(docSnap);
 };
 
-export const createStudent = async (student) => {
-    // CollectionReference
-    const colRef = firestore.collection("students");
-    // DocumentReference
-    const docRef = colRef.doc();
-    await docRef.set(student);
-};
-
+//update
 export const updateStudent = async (id, partial) => {
     const colRef = firestore.collection("students");
     const docRef = colRef.doc(id);
     await docRef.update(partial);
 };
 
+//delete
 export const deleteStudent = async (id) => {
     const colRef = firestore.collection("students");
     const docRef = colRef.doc(id);
